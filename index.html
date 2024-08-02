@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashley Veronica - My Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="home.css">
+<link rel="shortcut icon" href="images/.alyx2.png" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+    <div class="innerheader" id="innerheader">
+        <img src="images/.alyx2.png" alt="logo" class="logo" style="width: 62px; height: 30px;"> 
+        
+        <div class="hamburger" id="ham" onclick="togglemenu()"> 
+            <div class="line1" id="l1"></div>
+            <div class="line2" id="l2"></div>
+            <div class="line3" id="l3"></div>
+        </div>
+
+        <div class="close" id="close" style="display: none; width: 20px; height: 20px;" onclick="togglemenuoff()"><img src=".icons/close (1).png"></div>
+
+     <section id="carousel">
+        <nav class="navbar" id="navbar">
+            <a href="Home.html" class="active">Home</a>
+            <a href="Services.html" class="#">Services</a>
+            <a href="Portfolio.html" class="#">Portfolio</a>
+            <a href="Contact.html" class="#">Contact</a>
+        </nav>
+        </section>
+
+        <!-- <button class="firstbtm">Get Started</button> -->
+    </div>
+    </header>
+
+    <section class="maincontent" id="maincontent">
+        
+        <div id="blinking_circle" class="hidden"></div>  
+         <div class="second" id="blinking"></div>
+ 
+        <div class="imagediv">
+            <!-- Ashley's Main Photo -->
+        </div>
+
+      <div class="Intro">
+        <h2>Hi, I'm Ashley Veronica</h2>
+        <p class="infotext">I'm a data scientist with five years of experience working in the healthcare industry. I have a strong passion for using data to drive business decisions and I'm excited about the potential of data science on people lives.
+        </p>
+        <button class="cta">Contact Me</button>
+      </div>
+
+    </section>
+
+    <section id="content2" style="background-color: #f2f3f5; height: 2000px;">
+        
+    </section>
+
+    <section id="content3" style="background-color: #ff7f6a58; height: 2000px;">
+        
+    </section>
+    
+    <footer id="footer">
+        <div class="socials">
+        <a href="https://x.com/yourprofile" target="_blank" class="icon-link"><i class="fab fa-twitter"></i></a>
+        <a href="https://linkedin.com/in/yourprofile" target="_blank" class="icon-link"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/yourprofile" target="_blank" class="icon-link"><i class="fab fa-github"></i></a>
+        </div>
+        
+        <p id="copyright" style="color: #303030;">&copy;2024 Tijani Folashaye. All Rights Reserved</p>
+    </footer>
+
+<script src="home.js"></script>    
+
+</body>
+</html>

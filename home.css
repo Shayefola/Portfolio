@@ -1,0 +1,565 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+    --teal: teal;
+    --antique: antiquewhite;
+    --black: #000;
+    --white: #fff;
+}
+
+::-webkit-scrollbar{
+    width: 12px;
+}
+
+::-webkit-scrollbar-track{
+    background: rgba(250, 235, 215, 0.26);
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb{
+    background: teal;
+    border-radius: 20px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--white);
+}
+
+#blinking_circle.hidden{
+    display: none;
+}
+
+/* The CSS starts with the smallest mobile screen  */
+
+header{
+    width: 100%;
+    height: 5rem;
+    display: grid;
+    place-items: center;
+    position: fixed;
+    background-color: var(--white);
+    top: 0;
+    z-index: 200;
+    border-bottom: 0.5px solid #4620250c;
+}
+
+.innerheader{
+    width: 19rem;
+    height: 3rem;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width:769px){
+.innerheader{
+    background-color: transparent;
+    border: 1px solid #46202579;
+    padding: 5px 20px;
+}
+
+#carousel{
+    width: 100%;
+    height: 50rem;
+    background-color: #00000095;
+    position: absolute;
+    top: 5rem;
+    z-index: 150;
+    left: 0;
+}
+
+.navbar{
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 200;
+    width: 20rem;
+    height: 50rem;
+    background-color: var(--white);
+    left: 0;
+    padding: 25px 0 0 0px;
+    gap: 5px;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: #777;
+    font-weight: 400;
+    font-size: 18px;
+}
+ 
+.navbar .active{
+    color:  var(--teal);
+    border-radius: 6px 0 0 6px;
+    font-weight: normal;
+    background-color: rgba(7, 194, 194, 0.027);
+    border-left: 5px solid teal;
+}
+
+.navbar [href]{
+    padding:15px 0 15px 40px;
+}
+
+}
+
+.hamburger{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 17px;
+    transition: 3s ease-in-out;
+}
+
+.hamburger .line1,
+.line2,
+.line3{
+    width: 20px;
+    height: 3px;
+    background-color: #462025;
+    border-radius: 9999px;
+}
+
+.firstbtm{
+    color: #000;
+    background-color: antiquewhite;
+    width: 7rem;
+    height: 2.5rem;
+    text-align: center;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-weight: 400;
+    font-size: 14px;
+    border: 0.5px solid #00000075;
+    transition: 0.5s linear;
+    cursor: pointer;
+    display: none;
+}
+
+
+.firstbtm:hover{
+    color: #462025;
+    background-color: rgba(240, 248, 255, 0.548);
+    border-radius: 12px;
+    border: 0.5px solid #030303;
+}
+
+#maincontent{
+    background-color: var(--antique);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    padding: 3rem 0;
+    z-index: 2;
+}
+
+@media only screen and (max-width:426px){
+
+#blinking_circle.show{
+    width: 220px;
+    height: 220px;
+    border-radius: 50%; 
+    background-color: #ffffff98;
+    position: absolute;
+    z-index: 6;
+    top: 7.4rem;
+    animation: fadein 5s infinite;
+    transition: 6s ease-in-out;
+}
+
+#blinking{
+    width: 225px;
+    height: 225px;
+    border-radius: 50%; 
+    background-color: #ffffff14;
+    animation: fadein 3s infinite;
+    top: 7rem;
+    position: absolute;
+    transition: 3s ease;
+    z-index: 5;
+}
+
+@keyframes fadein{
+    0% {opacity: 2;}
+    50% {opacity: 5;}
+    100% {opacity: 0;}
+}
+
+}
+.imagediv{
+    width: 200px;
+    border-radius: 50%; 
+    height: 200px;
+    border: 5px solid #fff;
+    object-fit: contain;
+    background-image: url(images/alyx.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 200px;
+    animation: fadeIn 12s;
+    z-index: 10;
+}
+
+@keyframes fadeIn{
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 5; }
+}
+
+.Intro{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 20px;
+    animation: slideIn 2s;
+     z-index: 10;
+}
+
+@keyframes slideIn{
+    0%{transform: translateX(-50%); }
+    50%{transform: translateX(-10%); }
+    100%{transform: translateX(auto); }
+}
+
+h2, p{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.infotext{
+    font-size: medium;
+    line-height: 1.5em;
+    color: #000000a1;
+}
+
+.cta{
+    width: 170px;
+    height: 50px;
+    color: #fff;
+    background-color: teal;
+    margin-top: 20px;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-weight: 450;
+    font-size: 16px;
+    border: none;
+    transition: 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+     z-index: 10;
+}
+
+.cta:hover{
+    background-color: #f2f3f4;
+    color: teal;
+    outline: solid 2px rgba(0, 128, 128, 0.603);
+}
+
+
+/* footer; end of the page */
+#footer{
+    width: 100%;
+    height: 120px;
+    background-color: #fffff2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    border-top: 1px solid #ffb380bd;
+    padding: 10px 20px 20px;
+} 
+
+#copyright{
+    font-size: 14px;
+    margin: 0;
+}
+
+.socials{
+    display: flex;
+    width: 100%;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.socials a{
+    color: #010101;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.socials a:hover{
+    color: #0bc3c3;
+    transition: color 0.3s;
+}
+
+/* css for mobile second phase screen */
+
+@media (min-width: 374px) {
+    .innerheader{
+        width: 21rem;
+        padding: 5px 25px;
+    }
+}
+
+/* css for mobile third phase screen  */
+
+@media (min-width: 424px) {
+        .innerheader{
+            width: 24rem;
+            padding: 5px 25px;
+        }
+}
+
+@media (min-width: 470px) {
+        .innerheader{
+            width: 35rem;
+            padding: 5px 25px;
+        }
+}
+
+/* css for tablet fourth phase screen */
+
+@media (min-width: 767px) {
+    .innerheader{
+        width: 42rem;
+        padding: 5px 30px;
+    }
+
+    #maincontent{
+        flex-direction: row-reverse;
+        gap: 50px;
+        padding: 3rem 0;
+        justify-content: center;
+        align-items: center;
+    }    
+
+    #blinking_circle{
+        display: none;
+    }
+
+    .Intro{
+        padding: 0;
+        align-items: flex-start;
+    }
+
+    h2, p{
+        text-align: start;
+        max-width: 400px;
+    }
+
+    h2{
+        font-size: 24px;
+        color: #030303;
+    }
+
+    .infotext{
+        font-size: 13px;
+        letter-spacing: 0.5px;
+        margin-top: 15px;
+        color: #000000c2;
+        line-height: 1.7em;
+    }
+
+    .cta{
+        width: 150px;
+    }
+}
+
+/* css for laptop1 fifth phase screen */
+
+@media (min-width: 1023px) {
+    header{
+        background-color: transparent;
+        border: none;
+        height: 7rem;
+    }
+
+    .innerheader{
+        width: 50rem;
+        height: 3.2rem;
+        padding: 11px 65px;
+        background-color: rgb(255, 254, 252);
+        border: 0.5px solid #dddbdb;
+    }    
+
+    #maincontent{
+        background-color: var(--antique);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    .navbar{
+       display: block;
+    }
+    
+    
+.navbar .active{
+    color:  #000;
+    font-weight: medium;
+}
+
+.navbar a{
+    margin: 0 15px;
+    transition: all 1s ease;
+    font-weight: 450;
+    padding: 7px 3px 3px 3px;
+}
+
+.navbar a:hover{
+    background-color: #e4e0e002;
+    border-bottom: 1px solid teal;
+    color: teal;
+    font-weight: 400;
+}
+
+[href]{
+    text-decoration: none;
+    color: #77777773;
+}
+
+    #maincontent{
+        gap: 120px;
+        padding: 10rem 3rem 10rem 3rem;
+        margin: 0;
+    }
+
+    h2, p{
+        max-width: 450px;
+    }
+
+    h2{
+        font-size: 26px;
+        margin-bottom: 5px;
+    }
+
+    .infotext{
+        font-size: 16px;
+        margin-bottom: 10px;
+        letter-spacing: 0;
+    }
+
+    .imagediv{
+        width: 280px;
+        height: 280px;
+        background-size: 280px;
+        border-width: 8px;
+    }
+
+    #blinking_circle.show{
+        width: 290px;
+        height: 290px;
+        border-radius: 50%; 
+        background-color: rgba(0, 128, 128, 0.452);
+        display: block;
+        position: absolute;
+        box-shadow: 4px 4px 7px #ffffffa6;
+        z-index: 6;
+        top: 9.7rem;
+        right: 5.2rem;
+        animation: fadein 3s infinite;
+        transition: 6s ease-in-out;
+    }
+    
+    #blinking{
+        width: 295px;
+        height: 295px;
+        border-radius: 50%; 
+        background-color: #ffffff14;
+        box-shadow: -2px -3px 3px #ffffff59;
+        position: absolute;
+        animation: fadein 3s infinite;
+        top: 9.6rem;
+        right: 4.8rem;
+        transition: 6s ease-in-out;
+        z-index: 5;
+    }
+    
+    @keyframes fadein{
+        0% {opacity: 2;}
+        50% {opacity: 5;}
+        100% {opacity: 0;}
+    }
+
+    #footer{
+        flex-direction: row;
+        justify-content: space-between;
+        height: 80px;
+        padding: 10px 50px ;
+    }
+
+    .socials{
+        width: 20%;
+    }
+    
+}
+
+/* css for laptop2 sixth phase screen */
+
+@media (min-width: 1200px) {
+    header{
+        height: 8rem;
+    }
+
+    .innerheader{
+        width: 68rem;
+        height: 3.5rem;
+        padding: 16px 50px;
+    }    
+
+    #maincontent{
+        gap: 150px;
+    }
+
+    #blinking_circle.show{
+        top: 9.7rem;
+        right: 14.2rem;
+    }
+
+    #blinking{
+        width: 300px;
+        height: 300px;
+        top: 9.5rem;
+        right: 13.7rem;
+    }
+
+    .infotext{
+        margin-top: 10px;
+    }
+
+    .hamburger{
+        display: none;
+    }
+
+    .navbar{
+        display: block;
+    }
+    
+    [href]{
+        text-decoration: none;
+        color: #777;
+    }
+
+    .firstbtm{
+        display: block;
+    }
+}
