@@ -297,13 +297,13 @@ h2, p{
 }
 
 .socials a{
-    color: #010101;
+    color: #030225d2;
     text-decoration: none;
     font-size: 30px;
 }
 
 .socials a:hover{
-    color: #0bc3c3;
+    color: rgb(17, 14, 168);
     transition: color 0.3s;
 }
 

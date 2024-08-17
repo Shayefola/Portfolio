@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: system-ui;
+    }
+
+    body{
+        background-color: #f2f3f4;
+        height: 100vh;
+        box-sizing: border-box;
+    }
+
+    section{
+        width: 35rem;
+        height: 25rem;
+        background-color: #fff;
+        border-radius: 12px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 7px 13px 15px 1px #77777746;
+        padding: 20px 50px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    aside{
+        margin-bottom: 30px;
+        width: 100%;
+    }
+
+    aside .bar{
+        padding: 5px 20px;
+        position: absolute;
+        top: 4%;
+    }
+
+    .line{
+        height: 65px;
+        width: 5px;
+        background-color: rebeccapurple;
+        border-radius: 4px;
+        position: absolute;
+        left: 50px;
+        top: 22px;
+    }
+
+    .bar h2{
+        margin-bottom: 4px;
+        font-weight: 600;
+    }
+
+    #question{
+        font-size: medium;
+        line-height: 1.5em;
+        letter-spacing: 0.7px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    #answerbox{
+        border: 0.5px solid rgba(128, 128, 128, 0.637);
+        width: 90%;
+        height: 30px;
+        padding: 5px 5px 5px 15px;
+        border-radius: 4px;
+    }
+
+    input{
+        font-size: 16px;
+        color: #141414;
+    }
+
+    input::placeholder{
+        font-size: 16px;
+    }
+
+    br{
+        height: 3px;
+    }
+
+    #checkout{
+        width: 150px;
+        height: 40px;
+        border-radius: 4px;
+        background-color: rgba(102, 51, 153, 0.87);
+        color: white;
+        border: none;
+        transition: 1s ease;
+        margin: 70px auto 5px;
+    }
+
+    #checkout:hover{
+        background-color: rebeccapurple;
+    }
+
+    #options{
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media (max-width: 426px) {
+        section{
+            width: 15rem;
+            height: 20rem;
+            flex-wrap: wrap;
+            padding: 20px 30px;
+        }
+
+        h2{
+            font-size: 18px;
+        }
+
+        .line{
+            height: 50px;
+            left: 30px;
+        }
+
+        .bar{
+            padding-left: 5px;
+        }
+
+        #question{
+            line-height: 1.2em;
+        }
+
+        #checkout{
+            margin-top: 20px;
+        }
+    }
+</style>
+<body>
+    <section id="form">
+        <aside>
+            <div class="line"></div>
+            <div class="bar">
+                <h2>Question 1</h2>
+                <p class="gRay" style="color: #777777;">Please fill in the details</p>
+            </div>
+        </aside>
+        <p id="question">What would you classify as an animal with two legs that can't fly but also can't walk, cannot sing but also can't talk?</p>
+        <input type="text" id="answerbox" placeholder="dog.." required><br>
+        <button type="submit" id="checkout" onclick="nextQuestion()">Continue</button>
+    </section>
+
+    <section id="form_2" style="display: none;">
+        <aside>
+            <div class="line"></div>
+            <div class="bar">
+                <h2>Question 2</h2>
+                <p class="gRay" style="color: #777777;">Please fill in the details</p>
+            </div>
+        </aside>
+        <p id="question">What would you classify as an animal with two legs that can't fly but also can't walk, cannot sing but also can't talk?</p>
+
+        <form action="/action.php" id="options">
+            <div class="first">
+        <input type="radio" id="A Dog" value="A Dog">
+        <label for="A Dog">A Dog</label><br>
+             </div>
+             <div class="second">
+        <input type="radio" id="Coccholotopus" value="Coccholotopus">
+        <label for="Coccholotopus">Coccholotopus</label><br>
+             </div>
+             <div class="third">
+        <input type="radio" id="I have no idea" value="maybe">
+        <label for="maybe">I have no idea</label><br>
+              </div>
+        </form>
+
+        <button type="submit" id="checkout" onclick="nextQuestion()">Continue</button>
+    </section>
+
+    <script src="exam_result.js"></script>
+</body>
+</html>
